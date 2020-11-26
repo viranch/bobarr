@@ -114,8 +114,8 @@ You can then re-start bobarr stack:
 ## Services
 
 * Bobarr http://localhost:3000
-* Bobarr GraphQL API http://localhost:4000/graphql
-* Bobarr background jobs http://localhost:4000/jobs
+* Bobarr GraphQL API http://localhost:3000/api/graphql
+* Bobarr background jobs http://localhost:3000/api/jobs
 * Jackett http://localhost:9117
 * Transmission http://localhost:9091
 

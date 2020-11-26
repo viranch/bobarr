@@ -16,6 +16,8 @@ services:
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv6.conf.all.disable_ipv6=1
+    ports:
+      - 9091:9091
     volumes:
       - /dev/net:/dev/net:z
       - ./packages/vpn:/vpn
@@ -33,12 +35,7 @@ services:
       - default
 
   transmission:
+    ports: {}
     network_mode: "service:vpn"
     depends_on:
       - vpn
-
-  transmission-web:
-    links:
-      - vpn:transmission
-    networks:
-      - default
